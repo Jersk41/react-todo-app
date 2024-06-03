@@ -6,7 +6,7 @@ function App() {
     {
       id: 1,
       title: 'Finish Progate React Course',
-      completed: true,
+      completed: false,
     },
     {
       id: 2,
@@ -20,7 +20,6 @@ function App() {
     },
   ]);
 
-
   const toggleCompleted = (todoId) => {
     const updatedTodos = todos.map((todo) => {
       if (todo.id === todoId) {
@@ -32,10 +31,19 @@ function App() {
     setTodos(updatedTodos);
   }
 
+  const deleteTodo = (todoId) => {
+    const currentTodo = todos.filter((todo) => todo.id !== todoId);
+    setTodos(currentTodo);
+  }
+
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Todo List</h1>
-      <Todos todos={todos} toggleCompleted={toggleCompleted} />
+      <Todos
+        todos={todos}
+        toggleCompleted={toggleCompleted}
+        deleteTodo={deleteTodo}
+      />
     </div>
   )
 }
