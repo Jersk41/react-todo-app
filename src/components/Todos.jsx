@@ -3,7 +3,7 @@ import TodoItem from './TodoItem';
 
 const Todos = ({ todos }) => {
     return (
-        <div style={styles.container}>
+        <div className='w-full sm:w-4/5 sm:mx-auto h-full grid grid-cols-1 gap-1'>
             {todos.map((todo) => {
                 return <TodoItem
                     key={todo.id}

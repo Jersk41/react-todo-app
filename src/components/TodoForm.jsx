@@ -1,32 +1,36 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const TodoForm = ({ addTodo }) => {
-    const [title, setTitle] = useState('');
+    const [title, setTitle] = useState('')
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-        addTodo(title);
-        setTitle('');
+        event.preventDefault()
+        addTodo(title)
+        setTitle('')
     }
 
     const handleChangeTitle = (event) => {
-        setTitle(event.target.value);
+        setTitle(event.target.value)
     }
 
-    console.log(title);
-
     return (
-        <div style={styles.container}>
+        <div className="mb-4 sm:mb-8 mt-4 sm:w-3/5 w-full mx-auto h-full shadow rounded-md">
             <form
+                className="flex justify-center align-center w-full border rounded-md"
                 onSubmit={(event) => handleSubmit(event)}
             >
                 <input type="text"
                     placeholder="Add your todo"
-                    style={styles.formInput}
-                    onChange={(event)=> handleChangeTitle(event)}
+                    className="form-input text-blue-500 h-full w-full text-lg self-center px-4 py-3 rounded-md border border-none bg-transparent"
+                    onChange={(event) => handleChangeTitle(event)}
                     value={title}
                 />
-                <button style={styles.button}>Add Todo</button>
+                <button className="h-full px-4 py-3 self-center text-center text-md rounded-r-md text-blue-600 border-2 border-blue-600 
+                hover:bg-blue-700 focus:bg-blue-800 hover:text-white focus:text-white transition-all duration-200">
+                    <FontAwesomeIcon icon={faPlus} />
+                </button>
             </form>
         </div>
     )

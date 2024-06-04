@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react'
+import React, { useState, createContext, useEffect } from 'react'
 import Todos from './components/Todos';
 import TodoForm from './components/TodoForm';
 
@@ -21,7 +21,12 @@ function App() {
       title: 'Study React with Ninja Ken',
       completed: false,
     },
-  ]);
+    {
+      id: 4,
+      title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, itaque dicta exercitationem officiis ipsam optio? Temporibus incidunt, illum odio distinctio quia quae aliquid officiis adipisci saepe magnam ex veniam doloremque.',
+      completed: false,
+    },
+  ])
 
   const toggleCompleted = (todoId) => {
     const updatedTodos = todos.map((todo) => {
@@ -59,8 +64,8 @@ function App() {
       toggleCompleted,
       deleteTodo
     }}>
-      <div style={styles.container}>
-        <h1 style={styles.title}>My Todo List</h1>
+      <div className='container text-center p-3 mx-auto h-full'>
+        <h1 className='font-bold font-sans text-3xl text-blue-600'>My Todo List</h1>
         <TodoForm addTodo={addTodo} />
         <Todos todos={todos} />
       </div>
