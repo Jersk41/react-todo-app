@@ -1,8 +1,16 @@
-# React + Vite
+# Proyek React: Todo App 2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ini adalah proyek Todo App 2 (versi fullnya) dengan React + Vite dari pembelajaran React di [Progate](https://progate.com/)
+**Proyek ini sama dalam fungsional dan design, namun dengan penambahan Tailwind CSS untuk styling nya**
 
-Currently, two official plugins are available:
+### Stacks
+Proyek ini dibuat menggunakan
+<div style="display:flex;flex-wrap:wrap;align-items:center">
+    <img src="https://raw.githubusercontent.com/SAWARATSUKI/KawaiiLogos/main/React/React.png" width="200px" alt="react"/>
+    <img src="https://vitejs.dev/logo.svg" width="125px" alt="Vite"/>
+    <img src="https://raw.githubusercontent.com/SAWARATSUKI/KawaiiLogos/main/tailwind%20css/Tailwindcss.png" width="250px" alt="tailwindcss"/>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Attributes
+- Logo React dan TailwindCSS dibuat oleh [Sawaratsuki](https://github.com/SAWARATSUKI/KawaiiLogos)
+- Logo Vite dari web resminya [Vite](https://vitejs.dev/)
